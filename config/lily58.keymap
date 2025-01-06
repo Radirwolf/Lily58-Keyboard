@@ -39,7 +39,7 @@
 // |       |     |  <- |   v  |  ->  |      |                   |  -   |  4   |  5   |  6   |      | PgUP |
 // |       |     |     |      |      |      |        |  | PSCRN |  +   |  1   |  2   |  3   |      | PgDW |
 //                     |      |      |      |        |  |       |      |      |      |
-            display-name = "Navigation";
+            display-name = "LOWER";
             bindings = <
 &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4        &kp BSLH        &trans     &kp K_MUTE  &kp K_VOL_DN  &kp K_VOL_UP  &kp HOME
 &trans  &trans  &trans    &kp UP     &trans     &trans                               &kp KP_MULTIPLY &kp KP_N7  &kp KP_N8   &kp KP_N9     &trans         &kp END
@@ -58,7 +58,7 @@
 // |  <   |  \   |   {  |  }   |  (   |   )  |                 |      |   <-  |   v   |  ->  |       |       |
 // |  >   |  *   |   +  |  -   |  =   |   |  |       |  |      |      |       |       |      |       |       |
 //                      |      |      |      |       |  |      |      |       |       |
-            display-name = "Symbols";
+            display-name = "RAISE";
             bindings = <
 &kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6                           &kp F7   &kp F8    &kp F9    &kp F10    &kp F11    &kp F12
 &trans  &kp AT    &kp POUND  &kp DLLR   &kp PRCNT  &kp AMPS                         &kp N6   &kp N7    &kp UP    &trans     &trans     &trans
