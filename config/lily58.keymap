@@ -1,3 +1,7 @@
+&led_strip {
+    chain-length = <6>;
+};
+
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -8,6 +12,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     keymap {
@@ -15,14 +22,14 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
             display-name = "Base";
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp DEL
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
@@ -39,7 +46,7 @@
 // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
 // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
-            display-name = "NAVIGATION";
+            display-name = "NAVIGATE";
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
 &kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
@@ -53,18 +60,18 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-//                     |      |      |      |        |  |       |      |       |       |
+// |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |                 |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+// |      |  @   |   #  |  $   |  %   |   &  |                 |      |       |   ^   |      |       |   W   |
+// |  <   |  \   |   {  |  }   |  (   |   )  |                 |      |   <-  |   v   |  ->  |       |       |
+// |  >   |  *   |   +  |  -   |  =   |   |  |OUT_TOG|  |      |      |       |       |      |       |       |
+//                      |      |      |      |       |  |      |      |       |       |
             display-name = "SYMBOLS";
             bindings = <
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp F7      &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6                            &kp F7   &kp F8    &kp F9    &kp F10    &kp F11    &kp F12
+&trans  &kp AT    &kp POUND  &kp DLLR   &kp PRCNT  &kp AMPS                          &kp N6   &kp N7    &kp UP    &trans     &trans     &kp W 
+&kp LT  &kp NUBS  &kp LBKT   &kp RBKT   &kp LPAR   &kp RPAR                          &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT  &trans
+&kp GT  &kp STAR  &kp PLUS   &kp MINUS  &kp EQUAL  &kp PIPE2  &out OUT_TOG &trans    &trans   &trans    &trans    &trans     &trans     &trans
+                             &trans     &trans     &trans     &trans       &trans    &trans   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -82,8 +89,4 @@
             status = "reserved";
         };
     };
-};
-
-&led_strip {
-    chain-length = <6>;
 };
