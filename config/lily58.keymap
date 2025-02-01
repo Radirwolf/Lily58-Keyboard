@@ -17,6 +17,43 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    macros {
+        SPC_ticket: SPC_ticket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "SPC_ticket";
+        };
+
+        SID: SID {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(T) &kp S &kp I &kp D &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "SID";
+        };
+
+        CUST: CUST {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(T) &kp C &kp I &kp D &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "CUST";
+        };
+
+        CML: CML {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(T) &kp C &kp M &kp L &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "CML";
+        };
+
+        CLOUD: CLOUD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LC(T) &kp C &kp L &kp O &kp U &kp D &kp M &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "CLOUD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,11 +104,11 @@
 //                      |      |      |      |       |  |      |      |       |       |
             display-name = "SYMBOLS";
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6                            &kp F7   &kp F8    &kp F9    &kp F10    &kp F11    &kp F12
-&trans  &kp AT    &kp POUND  &kp DLLR   &kp PRCNT  &kp AMPS                          &kp N6   &kp N7    &kp UP    &trans     &trans     &kp W 
-&kp LT  &kp NUBS  &kp LBKT   &kp RBKT   &kp LPAR   &kp RPAR                          &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT  &trans
-&kp GT  &kp STAR  &kp PLUS   &kp MINUS  &kp EQUAL  &kp PIPE2  &out OUT_TOG &trans    &trans   &trans    &trans    &trans     &trans     &trans
-                             &trans     &trans     &trans     &trans       &trans    &trans   &trans    &trans
+&kp F1  &SPC_ticket  &SID              &CUST              &CML                  &CLOUD                                         &kp F7  &kp F8    &kp F9        &kp F10  &kp F11    &kp F12
+&trans  &kp AT       &kp HASH          &kp DOLLAR         &kp PERCENT           &kp AMPERSAND                                  &trans  &trans    &kp UP_ARROW  &trans   &trans     &kp LC(LS(W))
+&kp LT  &kp SLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                          &trans  &kp LEFT  &kp DOWN      &kp UP   &kp RIGHT  &trans
+&kp GT  &kp STAR     &kp PLUS          &kp MINUS          &kp EQUAL             &kp PIPE2              &out OUT_TOG    &tog 1  &trans  &trans    &trans        &trans   &trans     &trans
+                                       &trans             &trans                &trans                 &trans          &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
