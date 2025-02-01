@@ -1,3 +1,7 @@
+&led_strip {
+    chain-length = <12>;
+};
+
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
@@ -155,7 +159,5 @@
             status = "reserved";
         };
     };
-    &led_strip {
-        chain-length = <12>;
-    };
+   
 };
