@@ -1,5 +1,5 @@
 &led_strip {
-    chain-length = <6>;
+    chain-length = <12>;
 };
 
 /*
