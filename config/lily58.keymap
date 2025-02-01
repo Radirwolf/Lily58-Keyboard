@@ -11,11 +11,11 @@
 
 / {
     macros {
-        SPC_ticket: SPC {
+        SPC_ticket: SPC_ticket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
-            label = "SPC";
+            label = "SPC_ticket";
         };
 
         SID: SID {
