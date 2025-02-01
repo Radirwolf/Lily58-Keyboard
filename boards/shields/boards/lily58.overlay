@@ -1,18 +1,7 @@
+#include <dt-bindings/led/led.h>
 
-&pinctrl {
-    // Other pinctrl definitions for other hardware
-    pwm0_default: pwm0_default {
-        group1 {
-            psels = <NRF_PSEL(PWM_OUT0, 0, 15)>;
-        };
-    };
-    pwm0_sleep: pwm0_sleep {
-        group1 {
-            psels = <NRF_PSEL(PWM_OUT0, 0, 15)>;
-            low-power-enable;
-        };
-    };
-};
+&led_strip {
+    chain-length = <6>;};
 
 &spi3 {
     compatible = "nordic,nrf-spim";
