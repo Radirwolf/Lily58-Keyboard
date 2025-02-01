@@ -17,6 +17,24 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        SPC_FG {
+            bindings = <&SPC_ticket>;
+            key-positions = <29 28 28 29>;
+        };
+
+        CML_VB {
+            bindings = <&CML>;
+            key-positions = <40 41>;
+        };
+
+        CLOUD_RT {
+            bindings = <&CLOUD>;
+            key-positions = <16 17>;
+        };
+    };
     macros {
         SPC_ticket: SPC_ticket {
             compatible = "zmk,behavior-macro";
