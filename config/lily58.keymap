@@ -17,66 +17,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-      combos {
-        compatible = "zmk,combos";
-
-        combo_SPC {
-            bindings = <&macro_SPC>;
-            key-positions = <26 39 22>;
-        };
-
-        combo_SID {
-            bindings = <&macro_SID>;
-            key-positions = <26 20 27>;
-        };
-
-        combo_CUST {
-            bindings = <&macro_CUST>;
-            key-positions = <39 26 19>;
-        };
-
-        combo_CML {
-            bindings = <&macro_CML>;
-            key-positions = <39 45 33>;
-        };
-
-        combo_CLOUD {
-            bindings = <&macro_CLOUD>;
-            key-positions = <39 33 21>;
-        };
-
-        combo_SR {
-            bindings = <&macro_SR>;
-            key-positions = <26 15 16>;
-        };
-
-        combo_WTS {
-            bindings = <&macro_WTS>;
-            key-positions = <14 17>;
-        };
-
-        combo_CAM {
-            bindings = <&macro_CAM>;
-            key-positions = <39 25 45>;
-        };
-
-        combo_PASSVAULT {
-            bindings = <&macro_PASSVAULT>;
-            key-positions = <22 25 26>;
-        };
-
-        combo_PQA {
-            bindings = <&macro_PQA>;
-            key-positions = <22 13 25>;
-        };
-
-        macro_INICIO {
-            bindings = <&macro_APPS_INICIO>;
-            key-positions = <20 44 39>;
-        };
-    };
-   
-   macros {
+    macros {
         macro_SPC: SPC_ticket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -152,6 +93,65 @@
             #binding-cells = <0>;
             bindings = <&kp LG(NUMBER_2) &kp LG(NUMBER_3) &kp LG(NUMBER_4)>;
             label = "MACRO_APPS_INICIO";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_SPC {
+            bindings = <&macro_SPC>;
+            key-positions = <26 39 22>;
+        };
+
+        combo_SID {
+            bindings = <&macro_SID>;
+            key-positions = <26 20 27>;
+        };
+
+        combo_CUST {
+            bindings = <&macro_CUST>;
+            key-positions = <39 26 19>;
+        };
+
+        combo_CML {
+            bindings = <&macro_CML>;
+            key-positions = <39 45 33>;
+        };
+
+        combo_CLOUD {
+            bindings = <&macro_CLOUD>;
+            key-positions = <39 33 21>;
+        };
+
+        combo_SR {
+            bindings = <&macro_SR>;
+            key-positions = <26 15 16>;
+        };
+
+        combo_WTS {
+            bindings = <&macro_WTS>;
+            key-positions = <14 17>;
+        };
+
+        combo_CAM {
+            bindings = <&macro_CAM>;
+            key-positions = <39 25 45>;
+        };
+
+        combo_PASSVAULT {
+            bindings = <&macro_PASSVAULT>;
+            key-positions = <22 25 26>;
+        };
+
+        combo_PQA {
+            bindings = <&macro_PQA>;
+            key-positions = <22 13 25>;
+        };
+
+        macro_INICIO {
+            bindings = <&macro_APPS_INICIO>;
+            key-positions = <20 44 39>;
         };
     };
 
