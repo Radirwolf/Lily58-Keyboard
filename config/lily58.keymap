@@ -17,141 +17,58 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_SPC_FG {
+            bindings = <&SPC_ticket>;
+            key-positions = <29 28 28 29>;
+        };
+
+        combo_CML_VB {
+            bindings = <&CML>;
+            key-positions = <40 41>;
+        };
+
+        combo_CLOUD_RT {
+            bindings = <&CLOUD>;
+            key-positions = <16 17>;
+        };
+    };
     macros {
-        macro_SPC: SPC_ticket {
+        SPC_ticket: SPC_ticket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
             label = "SPC_ticket";
         };
 
-        macro_SID: SID {
+        SID: SID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp S &kp I &kp D &kp SPACE &kp LC(V) &kp ENTER>;
             label = "SID";
         };
 
-        macro_CUST: CUST {
+        CUST: CUST {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp C &kp I &kp D &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CUST";
         };
 
-        macro_CML: CML {
+        CML: CML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp C &kp M &kp L &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CML";
         };
 
-        macro_CLOUD: CLOUD {
+        CLOUD: CLOUD {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp LC(T) &kp C &kp L &kp O &kp U &kp D &kp SPACE &kp LC(V) &kp ENTER>;
+            bindings = <&kp LC(C) &kp LC(T) &kp C &kp L &kp O &kp U &kp D &kp M &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CLOUD";
-        };
-
-        macro_SR: macro_SR {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp M &kp E &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp R &kp E &kp Q &kp U &kp E &kp S &kp T &kp ENTER>;
-            label = "MACRO_SR";
-        };
-
-        macro_WTS: macro_WTS {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp H &kp E &kp C &kp DOT &kp C &kp I &kp T &kp R &kp I &kp X &kp MINUS &kp A &kp C &kp C &kp E &kp S &kp S &kp DOT &kp G &kp L &kp O &kp B &kp A &kp L &kp DOT &kp C &kp O &kp R &kp P &kp DOT &kp S &kp A &kp P &kp FSLH &kp L &kp O &kp G &kp O &kp N &kp FSLH &kp LS(L) &kp O &kp G &kp O &kp N &kp LS(P) &kp O &kp I &kp N &kp T &kp FSLH &kp T &kp M &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp ENTER>;
-            label = "MACRO_WTS";
-        };
-
-        macro_CAM: macro_CAM {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp S &kp P &kp C &kp DOT &kp O &kp N &kp D &kp E &kp M &kp A &kp N &kp D &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp A &kp P &kp FSLH &kp B &kp C &kp FSLH &kp W &kp E &kp B &kp D &kp Y &kp N &kp P &kp R &kp O &kp FSLH &kp A &kp N1 &kp S &kp S &kp P &kp C &kp FSLH &kp C &kp A &kp M &kp UNDER &kp W &kp D &kp UNDER &kp C &kp E &kp N &kp T &kp R &kp A &kp L &kp POUND &kp ENTER>;
-            label = "MACRO_CAM";
-        };
-
-        macro_PASSVAULT: macro_PASSVAULT {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp P &kp A &kp S &kp S &kp W &kp O &kp R &kp D &kp DOT &kp W &kp D &kp F &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp R &kp P &kp FSLH &kp P &kp A &kp S &kp S &kp V &kp A &kp U &kp L &kp T &kp FSLH &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp POUND &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp ENTER>;
-            label = "MACRO_PASSVAULT";
-        };
-
-        macro_PQA: macro_PQA {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(L) &kp P &kp Q &kp A &kp SPACE>;
-            label = "MACRO_PQA";
-        };
-
-        macro_APPS_INICIO: macro_APPS_INICIO {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(NUMBER_2) &kp LG(NUMBER_3) &kp LG(NUMBER_4)>;
-            label = "MACRO_APPS_INICIO";
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_SPC {
-            bindings = <&macro_SPC>;
-            key-positions = <26 39 22>;
-        };
-
-        combo_SID {
-            bindings = <&macro_SID>;
-            key-positions = <26 20 27>;
-        };
-
-        combo_CUST {
-            bindings = <&macro_CUST>;
-            key-positions = <39 26 19>;
-        };
-
-        combo_CML {
-            bindings = <&macro_CML>;
-            key-positions = <39 45 33>;
-        };
-
-        combo_CLOUD {
-            bindings = <&macro_CLOUD>;
-            key-positions = <39 33 21>;
-        };
-
-        combo_SR {
-            bindings = <&macro_SR>;
-            key-positions = <26 15 16>;
-        };
-
-        combo_WTS {
-            bindings = <&macro_WTS>;
-            key-positions = <14 17>;
-        };
-
-        combo_CAM {
-            bindings = <&macro_CAM>;
-            key-positions = <39 25 45>;
-        };
-
-        combo_PASSVAULT {
-            bindings = <&macro_PASSVAULT>;
-            key-positions = <22 25 26>;
-        };
-
-        combo_PQA {
-            bindings = <&macro_PQA>;
-            key-positions = <22 13 25>;
-        };
-
-        macro_INICIO {
-            bindings = <&macro_APPS_INICIO>;
-            key-positions = <20 44 39>;
         };
     };
 
@@ -167,11 +84,11 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
             display-name = "Base";
             bindings = <
-&kp ESC             &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8         &kp N9   &kp N0    &kp DELETE
-&kp TAB             &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I          &kp O    &kp P     &kp MINUS
-&kp LCTRL           &kp A   &kp S   &kp D     &kp F     &kp G                          &kp H   &kp J     &kp K          &kp L    &kp SEMI  &kp SQT
-&mt LSHFT CAPSLOCK  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA      &kp DOT  &kp FSLH  &mt RIGHT_SHIFT CAPS
-                                    &kp LALT  &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RIGHT_ALT
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp DEL
+&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
+&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                        &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -205,11 +122,11 @@
 //                      |      |      |      |       |  |      |      |       |       |
             display-name = "SYMBOLS";
             bindings = <
-&kp F1  &macro_SPC  &macro_SID        &macro_CUST        &macro_CML            &macro_CLOUD                                   &kp F7  &kp F8    &kp F9        &kp F10          &kp F11  &kp F12
-&trans  &kp AT      &kp HASH          &kp DOLLAR         &kp PERCENT           &kp AMPERSAND                                  &trans  &trans    &kp UP_ARROW  &trans           &trans   &kp LC(LS(W))
-&kp LT  &kp SLASH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                          &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &trans   &trans
-&kp GT  &kp STAR    &kp PLUS          &kp MINUS          &kp EQUAL             &kp PIPE2              &out OUT_TOG    &tog 1  &trans  &trans    &trans        &trans           &trans   &trans
-                                      &trans             &trans                &trans                 &trans          &trans  &trans  &trans    &mo 3
+&kp F1  &SPC_ticket  &SID              &CUST              &CML                  &CLOUD                                         &kp F7  &kp F8    &kp F9        &kp F10  &kp F11    &kp F12
+&trans  &kp AT       &kp HASH          &kp DOLLAR         &kp PERCENT           &kp AMPERSAND                                  &trans  &trans    &kp UP_ARROW  &trans   &trans     &kp LC(LS(W))
+&kp LT  &kp SLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                          &trans  &kp LEFT  &kp DOWN      &kp UP   &kp RIGHT  &trans
+&kp GT  &kp STAR     &kp PLUS          &kp MINUS          &kp EQUAL             &kp PIPE2              &out OUT_TOG    &tog 1  &trans  &trans    &trans        &trans   &trans     &trans
+                                       &trans             &trans                &trans                 &trans          &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
