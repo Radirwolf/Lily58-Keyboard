@@ -22,7 +22,7 @@
 
         combo_SPC_FG {
             bindings = <&SPC_ticket>;
-            key-positions = <29 28 28 29>;
+            key-positions = <28 29>;
         };
 
         combo_CML_VB {
