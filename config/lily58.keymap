@@ -43,11 +43,11 @@
             label = "SPC_ticket";
         };
 
-        macro_SPC: SPC_ticket {
+        macro_SPC: SPC_ticket2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
-            label = "SPC_ticket";
+            label = "SPC_ticket2";
         };
 
         SID: SID {
