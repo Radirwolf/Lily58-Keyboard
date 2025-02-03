@@ -106,33 +106,33 @@
             label = "CLOUD";
         };
 
-//        macro_SR: macro_SR {
-//           compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp M &kp E &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp R &kp E &kp Q &kp U &kp E &kp S &kp T &kp ENTER>;
-//            label = "MACRO_SR";
-//        };
+        macro_SR: macro_SR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp M &kp E &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp E &kp R &kp V &kp I &kp C &kp E &kp R &kp E &kp Q &kp U &kp E &kp S &kp T &kp ENTER>;
+            label = "MACRO_SR";
+        };
 
-//        macro_WTS: macro_WTS {
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp H &kp E &kp C &kp DOT &kp C &kp I &kp T &kp R &kp I &kp X &kp MINUS &kp A &kp C &kp C &kp E &kp S &kp S &kp DOT &kp G &kp L &kp O &kp B &kp A &kp L &kp DOT &kp C &kp O &kp R &kp P &kp DOT &kp S &kp A &kp P &kp FSLH &kp L &kp O &kp G &kp O &kp N &kp FSLH &kp LS(L) &kp O &kp G &kp O &kp N &kp LS(P) &kp O &kp I &kp N &kp T &kp FSLH &kp T &kp M &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp ENTER>;
-//            label = "MACRO_WTS";
-//        };
+        macro_WTS: macro_WTS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp H &kp E &kp C &kp DOT &kp C &kp I &kp T &kp R &kp I &kp X &kp MINUS &kp A &kp C &kp C &kp E &kp S &kp S &kp DOT &kp G &kp L &kp O &kp B &kp A &kp L &kp DOT &kp C &kp O &kp R &kp P &kp DOT &kp S &kp A &kp P &kp FSLH &kp L &kp O &kp G &kp O &kp N &kp FSLH &kp LS(L) &kp O &kp G &kp O &kp N &kp LS(P) &kp O &kp I &kp N &kp T &kp FSLH &kp T &kp M &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp ENTER>;
+            label = "MACRO_WTS";
+        };
 
-//        macro_CAM: macro_CAM {
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp S &kp P &kp C &kp DOT &kp O &kp N &kp D &kp E &kp M &kp A &kp N &kp D &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp A &kp P &kp FSLH &kp B &kp C &kp FSLH &kp W &kp E &kp B &kp D &kp Y &kp N &kp P &kp R &kp O &kp FSLH &kp A &kp N1 &kp S &kp S &kp P &kp C &kp FSLH &kp C &kp A &kp M &kp UNDER &kp W &kp D &kp UNDER &kp C &kp E &kp N &kp T &kp R &kp A &kp L &kp POUND &kp ENTER>;
-//            label = "MACRO_CAM";
-//        };
+        macro_CAM: macro_CAM {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp S &kp P &kp C &kp DOT &kp O &kp N &kp D &kp E &kp M &kp A &kp N &kp D &kp DOT &kp C &kp O &kp M &kp FSLH &kp S &kp A &kp P &kp FSLH &kp B &kp C &kp FSLH &kp W &kp E &kp B &kp D &kp Y &kp N &kp P &kp R &kp O &kp FSLH &kp A &kp N1 &kp S &kp S &kp P &kp C &kp FSLH &kp C &kp A &kp M &kp UNDER &kp W &kp D &kp UNDER &kp C &kp E &kp N &kp T &kp R &kp A &kp L &kp POUND &kp ENTER>;
+            label = "MACRO_CAM";
+        };
 
-//        macro_PASSVAULT: macro_PASSVAULT {
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp P &kp A &kp S &kp S &kp W &kp O &kp R &kp D &kp DOT &kp W &kp D &kp F &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp R &kp P &kp FSLH &kp P &kp A &kp S &kp S &kp V &kp A &kp U &kp L &kp T &kp FSLH &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp POUND &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp ENTER>;
-//            label = "MACRO_PASSVAULT";
-//        };
+        macro_PASSVAULT: macro_PASSVAULT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp P &kp A &kp S &kp S &kp W &kp O &kp R &kp D &kp DOT &kp W &kp D &kp F &kp DOT &kp S &kp A &kp P &kp DOT &kp C &kp O &kp R &kp P &kp FSLH &kp P &kp A &kp S &kp S &kp V &kp A &kp U &kp L &kp T &kp FSLH &kp I &kp N &kp D &kp E &kp X &kp DOT &kp H &kp T &kp M &kp L &kp POUND &kp FSLH &kp S &kp E &kp A &kp R &kp C &kp H &kp ENTER>;
+            label = "MACRO_PASSVAULT";
+        };
 
         macro_PQA: macro_PQA {
             compatible = "zmk,behavior-macro";
