@@ -12,49 +12,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_SPC_FG {
-            bindings = <&SPC_ticket>;
-            key-positions = <26 39>;
-        };
-
-        combo_CML_VB {
-            bindings = <&CML>;
-            key-positions = <39 45 33>;
-        };
-
-        combo_CLOUD_RT {
-            bindings = <&CLOUD>;
-            key-positions = <39 33 21>;
-        };
-
-        combo_CUST {
-            bindings = <&CUST>;
-            key-positions = <39 26 19>;
-        };
-
-    };
-
+    
     macros {
         SPC_ticket: SPC_ticket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
             label = "SPC_ticket";
-        };
-
-        macro_SPC: SPC_ticket2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp LC(T) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
-            label = "SPC_ticket2";
         };
 
         SID: SID {
