@@ -87,7 +87,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2    &bt BT_SEL 3     &bt BT_SEL 4                                 &kp BSLH         &kp K_PLAY_PAUSE  &kp K_MUTE       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp HOME
 &kp TAB     &trans        &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp LC(T)                                    &kp KP_MULTIPLY  &kp KP_NUMBER_7   &kp KP_NUMBER_8  &kp KP_NUMBER_9    &trans           &kp END
-&trans      &trans        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(W)                                    &kp KP_SUBTRACT  &kp KP_NUMBER_4   &kp KP_NUMBER_5  &kp KP_NUMBER_6    &trans           &kp PAGE_UP
+&trans      &kp LC(A)        &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(W)                                    &kp KP_SUBTRACT  &kp KP_NUMBER_4   &kp KP_NUMBER_5  &kp KP_NUMBER_6    &trans           &kp PAGE_UP
 &trans      &kp LC(Z)     &kp LC(X)        &kp LC(C)       &kp LC(V)        &kp LC(R)     &kp LA(F4)    &kp PRINTSCREEN  &kp KP_PLUS      &kp KP_NUMBER_1   &kp KP_NUMBER_2  &kp KP_NUMBER_3    &kp PERIOD       &kp PAGE_DOWN
                                            &trans          &trans           &trans        &trans        &trans           &trans           &trans            &kp KP_NUMBER_0
             >;
@@ -104,10 +104,10 @@
 //                      |      |      |      |       |  |      |      |       |       |
             display-name = "SYMBOLS";
             bindings = <
-&kp F1  &SPC_ticket  &SID              &CUST              &CML                  &CLOUD                                         &kp F7  &kp F8    &kp F9        &kp F10  &kp F11    &kp F12
-&trans  &kp AT       &kp HASH          &kp DOLLAR         &kp PERCENT           &kp AMPERSAND                                  &trans  &trans    &kp UP_ARROW  &trans   &trans     &kp LC(LS(W))
-&kp LT  &kp SLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                          &trans  &kp LEFT  &kp DOWN      &kp UP   &kp RIGHT  &trans
-&kp GT  &kp STAR     &kp PLUS          &kp MINUS          &kp EQUAL             &kp PIPE2              &out OUT_TOG    &tog 1  &trans  &trans    &trans        &trans   &trans     &trans
+&kp F1  &SPC_ticket  &SID              &CUST              &CML                  &CLOUD                                         &kp F7  &kp F8    &kp F9        &kp F10   &kp F11    &kp F12
+&trans  &kp AT       &kp HASH          &kp DOLLAR         &kp PERCENT           &kp AMPERSAND                                  &trans  &trans    &kp UP_ARROW  &trans    &trans     &kp LC(LS(W))
+&kp LT  &kp SLASH    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                          &trans  &kp LEFT  &kp DOWN      &kp RIGHT &trans     &trans
+&kp GT  &kp STAR     &kp PLUS          &kp MINUS          &kp EQUAL             &kp PIPE2              &out OUT_TOG    &tog 1  &trans  &trans    &trans        &trans    &trans     &trans
                                        &trans             &trans                &trans                 &trans          &trans  &trans  &trans    &trans
             >;
 
