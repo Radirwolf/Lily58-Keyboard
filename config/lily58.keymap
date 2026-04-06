@@ -47,7 +47,7 @@
         };
     };
 
-    combos {
+/*    combos {
         compatible = "zmk,combos";
 
         Combo_1 {
@@ -60,7 +60,7 @@
             key-positions = <19 20 21>;
         };
     };
-
+*/
     keymap {
         compatible = "zmk,keymap";
 
