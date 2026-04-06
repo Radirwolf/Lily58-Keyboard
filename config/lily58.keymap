@@ -40,11 +40,11 @@
             label = "CML";
         };
 
-        CLOUD: CLOUD {
+        SPC_ticket_2: SPC_ticket_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp LC(T) &kp C &kp L &kp O &kp U &kp D &kp M &kp SPACE &kp LC(V) &kp ENTER>;
-            label = "CLOUD";
+            bindings = <&kp LC(L) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "SPC_TICKET_2";
         };
     };
 
