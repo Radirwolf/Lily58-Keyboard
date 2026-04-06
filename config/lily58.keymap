@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -47,7 +48,7 @@
         };
     };
 
-/*    combos {
+    combos {
         compatible = "zmk,combos";
 
         Combo_1 {
@@ -60,7 +61,7 @@
             key-positions = <19 20 21>;
         };
     };
-*/
+
     keymap {
         compatible = "zmk,keymap";
 
