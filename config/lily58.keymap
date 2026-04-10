@@ -32,13 +32,13 @@
             bindings = <&kp LC(C) &kp LC(T) &kp C &kp I &kp D &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CUST";
         };
-        
-        SPC_same_page: SPC_same_page {
+
+        CML: CML {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(L) &kp S &kp P &kp C &kp SPACE &kp LC(V) &kp ENTER>;
-            label = "SPC_same_page";
-        };
+            bindings = <&kp LC(C) &kp LC(T) &kp C &kp M &kp L &kp SPACE &kp LC(V) &kp ENTER>;
+            label = "CML";
+        };       
     };
 
     combos {
