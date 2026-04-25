@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -38,7 +39,6 @@
             bindings = <&kp LC(C) &kp LC(T) &kp C &kp M &kp L &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CML";
         };       
-        };
 
         CLOUD: CLOUD {
             compatible = "zmk,behavior-macro";
