@@ -37,9 +37,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp LC(T) &kp C &kp M &kp L &kp SPACE &kp LC(V) &kp ENTER>;
             label = "CML";
-<<<<<<< HEAD
         };       
-=======
         };
 
         CLOUD: CLOUD {
@@ -50,7 +48,7 @@
         };
     };
 
-/*    combos {
+    combos {
         compatible = "zmk,combos";
 
         Combo_1 {
@@ -62,9 +60,8 @@
             bindings = <&mo 4>;
             key-positions = <19 20 21>;
         };
->>>>>>> parent of c81cc4b (Update lily58.keymap)
     };
-*/
+
     keymap {
         compatible = "zmk,keymap";
 
